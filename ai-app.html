@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Joke Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #002654;
+    }
+    #joke-box {
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: #002654;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00509e;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Joke Generator</h1>
+  <div id="joke-box">Click the button to get a joke!</div>
+  <button onclick="generateJoke()">Get Joke</button>
+  <br /><br />
+  <a href="scratch.html">← Back to Scratch Page</a>
+
+  <script>
+    const jokes = [
+      "Why don’t football teams use the internet? Too many dropped packets.",
+      "Why was the football stadium so cold? It was full of fans.",
+      "Why did the linebacker bring string to the game? To tie the score!",
+      "Why did BYU bring a ladder to the game? Because they were playing in a higher league!",
+      "How do BYU fans stay cool? They sit in the shade of their reputation!"
+    ];
+
+    function generateJoke() {
+      const random = Math.floor(Math.random() * jokes.length);
+      document.getElementById('joke-box').innerText = jokes[random];
+    }
+  </script>
+</body>
+</html>
